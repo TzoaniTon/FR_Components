@@ -10,7 +10,7 @@ import FR_BaseComponent
 import RxCocoa
 import RxSwift
 
-public class CellViewModel_0001: BaseCellViewModel {
+open class CellViewModel_0001: BaseCellViewModel {
     
     public var imageLeft = Variable<UIImage?>(nil)
     public var title = Variable<String?>(nil)
@@ -32,7 +32,7 @@ public class CellViewModel_0001: BaseCellViewModel {
         self.imageRight.value = imageRight
     }
     
-    override public func setupCellView() throws -> BaseCellView {
+    override open func setupCellView() throws -> BaseCellView {
         let cellView = BaseCellView.build(cellType: CellView_0001.self)
         
         _ = imageLeft.asObservable().bind(to: cellView.imageLeftView.rx.image)

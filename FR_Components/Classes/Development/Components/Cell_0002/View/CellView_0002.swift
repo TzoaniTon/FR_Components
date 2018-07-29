@@ -1,5 +1,5 @@
 //
-//  CellView_0001.swift
+//  CellView_0002.swift
 //  FR_Components
 //
 //  Created by Sarinthon Mangkorn-ngam on 29/7/2561 BE.
@@ -7,12 +7,10 @@
 
 import FR_BaseComponent
 
-public class CellView_0001: BaseCellView {
+public class CellView_0002: BaseCellView {
 
-    @IBOutlet var imageLeftView: UIImageView!
-    @IBOutlet var labelTitleView: UILabel!
-    @IBOutlet var labelSubtitleView: UILabel!
-    @IBOutlet var imageRightView: UIImageView!
+    @IBOutlet weak var labelTitleView: UILabel!
+    @IBOutlet weak var textDetailView: UITextView!
     
     override public func awakeFromNib() {
         super.awakeFromNib()
