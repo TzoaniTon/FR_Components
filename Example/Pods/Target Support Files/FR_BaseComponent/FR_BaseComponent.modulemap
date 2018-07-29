@@ -1,0 +1,6 @@
+framework module FR_BaseComponent {
+  umbrella header "FR_BaseComponent-umbrella.h"
+
+  export *
+  module * { export * }
+}

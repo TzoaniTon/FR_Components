@@ -1,15 +1,30 @@
 PODS:
-  - FR_Components (0.1.0)
+  - FR_BaseComponent (1.0.1):
+    - RxCocoa (~> 4.0)
+  - FR_Components (0.1.1):
+    - FR_BaseComponent (~> 1.0)
+  - RxCocoa (4.2.0):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.2.0)
 
 DEPENDENCIES:
   - FR_Components (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - FR_BaseComponent
+    - RxCocoa
+    - RxSwift
 
 EXTERNAL SOURCES:
   FR_Components:
     :path: "../"
 
 SPEC CHECKSUMS:
-  FR_Components: 8e5d49746ecd2db4ac785bf4e6dde558b700beb1
+  FR_BaseComponent: 86ae75215387ce15d40fffe153a6dfddb654b1fe
+  FR_Components: 534ef5185e90ee030741da3cc54a07f80da75046
+  RxCocoa: 0b54909c902e1e581212a03e690bbd94032d8baa
+  RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
 
 PODFILE CHECKSUM: 79a21c7347c3cfc809012af23be965c6dc358b80
 
