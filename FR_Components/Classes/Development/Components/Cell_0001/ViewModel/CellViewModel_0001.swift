@@ -17,7 +17,7 @@ public class CellViewModel_0001: BaseCellViewModel {
     public var subtitle = Variable<String?>(nil)
     public var imageRight = Variable<UIImage?>(nil)
     
-    init(
+    public init(
         imageLeft: UIImage,
         title: String,
         subtitle: String,
