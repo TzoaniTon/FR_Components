@@ -1,4 +1,4 @@
-# FR_Components
+# Presentation Components of Four Rest
 
 [![CI Status](https://img.shields.io/travis/Tzoani/FR_Components.svg?style=flat)](https://travis-ci.org/Tzoani/FR_Components)
 [![Version](https://img.shields.io/cocoapods/v/FR_Components.svg?style=flat)](https://cocoapods.org/pods/FR_Components)
@@ -11,6 +11,9 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
+1. iOS version 10+
+2. Swift version v4.0+
+
 ## Installation
 
 FR_Components is available through [CocoaPods](https://cocoapods.org). To install
@@ -22,7 +25,8 @@ pod 'FR_Components'
 
 ## Author
 
-Tzoani, darksky_ddd@hotmail.com
+Sarinthon Mangkorn-ngam, sarinthonton@gmail.com <br>
+Lalida Jaritsup, lalida.jar@gmail.com
 
 ## License
 
