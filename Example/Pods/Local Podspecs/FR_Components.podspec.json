@@ -1,0 +1,22 @@
+{
+  "name": "FR_Components",
+  "version": "0.1.0",
+  "summary": "A short description of FR_Components.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Tzoani/FR_Components",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Tzoani": "darksky_ddd@hotmail.com"
+  },
+  "source": {
+    "git": "https://github.com/Tzoani/FR_Components.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "FR_Components/Classes/**/*"
+}

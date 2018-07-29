@@ -1,0 +1,16 @@
+PODS:
+  - FR_Components (0.1.0)
+
+DEPENDENCIES:
+  - FR_Components (from `../`)
+
+EXTERNAL SOURCES:
+  FR_Components:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FR_Components: 8e5d49746ecd2db4ac785bf4e6dde558b700beb1
+
+PODFILE CHECKSUM: 79a21c7347c3cfc809012af23be965c6dc358b80
+
+COCOAPODS: 1.5.3
