@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FR_Components'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.summary          = 'FR_Components is central component of presentation layer for 4Rest'
   s.description      = '4Rest is Core Framework of iOS that consists of Data mapping, Merge data, Network manager, Security, Database manager and Presentation manager'
   s.homepage         = 'https://github.com/TzoaniTon/FR_Components'
@@ -37,6 +37,6 @@ Pod::Spec.new do |s|
   
   # Dependency #
   
-  s.dependency 'FR_BaseComponent', '~> 1.0'
+  s.dependency 'FR_BaseComponent'
   
 end
