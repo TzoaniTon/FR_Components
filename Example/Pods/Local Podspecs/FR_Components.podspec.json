@@ -1,6 +1,6 @@
 {
   "name": "FR_Components",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "summary": "FR_Components is central component of presentation layer for 4Rest",
   "description": "4Rest is Core Framework of iOS that consists of Data mapping, Merge data, Network manager, Security, Database manager and Presentation manager",
   "homepage": "https://github.com/TzoaniTon/FR_Components",
@@ -14,7 +14,7 @@
   },
   "source": {
     "git": "https://github.com/TzoaniTon/FR_Components.git",
-    "tag": "1.0.0"
+    "tag": "1.0.1"
   },
   "platforms": {
     "ios": "10.0"
@@ -27,7 +27,7 @@
   ],
   "dependencies": {
     "FR_BaseComponent": [
-      "~> 1.0"
+
     ]
   }
 }

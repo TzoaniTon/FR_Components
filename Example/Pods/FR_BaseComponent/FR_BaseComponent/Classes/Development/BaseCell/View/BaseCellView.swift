@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import SwipeCellKit
 
-open class BaseCellView: UITableViewCell {
+open class BaseCellView: SwipeTableViewCell {
 
     override open func awakeFromNib() {
         super.awakeFromNib()
@@ -18,16 +19,6 @@ open class BaseCellView: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
-    }
-    
-    public static func build<T>( cellType: T.Type ) -> T {
-        let className = String(describing: cellType)
-        let bundle = Bundle(for: cellType as! AnyClass)
-        
-        let nib = bundle.loadNibNamed(className, owner: nil, options: nil)
-        let cellView = nib!.last
-        
-        return cellView as! T
     }
 
 }

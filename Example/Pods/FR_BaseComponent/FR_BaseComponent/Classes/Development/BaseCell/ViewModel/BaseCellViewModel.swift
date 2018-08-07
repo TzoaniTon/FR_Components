@@ -22,6 +22,9 @@ open class BaseCellViewModel {
     public var cellSelectionStyle: UITableViewCellSelectionStyle?
     public var cellAccessoryType: UITableViewCellAccessoryType?
     
+    public var swipeLeftCell: SwipeCellModel?
+    public var swipeRightCell: SwipeCellModel?
+    
     public init(
         cellHeight: CGFloat?,
         cellAccessoryType: UITableViewCellAccessoryType?
