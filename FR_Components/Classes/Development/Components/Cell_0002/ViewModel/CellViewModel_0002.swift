@@ -17,7 +17,7 @@ open class CellViewModel_0002: BaseCellViewModel {
     public init(
         title: String,
         detail: String,
-        cellAccessoryType: UITableViewCellAccessoryType = UITableViewCellAccessoryType.none
+        cellAccessoryType: UITableViewCell.AccessoryType = UITableViewCell.AccessoryType.none
     ) {
         super.init(cellHeight: nil, cellAccessoryType: cellAccessoryType)
         

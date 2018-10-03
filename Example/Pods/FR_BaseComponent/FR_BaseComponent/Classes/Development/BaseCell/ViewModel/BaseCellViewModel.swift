@@ -19,15 +19,15 @@ open class BaseCellViewModel {
     public var cellSelected = Variable<Bool>(false)
     
     public var cellHeight: CGFloat?
-    public var cellSelectionStyle: UITableViewCellSelectionStyle?
-    public var cellAccessoryType: UITableViewCellAccessoryType?
+    public var cellSelectionStyle: UITableViewCell.SelectionStyle?
+    public var cellAccessoryType: UITableViewCell.AccessoryType?
     
     public var swipeLeftCell: SwipeCellModel?
     public var swipeRightCell: SwipeCellModel?
     
     public init(
         cellHeight: CGFloat?,
-        cellAccessoryType: UITableViewCellAccessoryType?
+        cellAccessoryType: UITableViewCell.AccessoryType?
         ) {
         self.cellHeight = cellHeight
         self.cellAccessoryType = cellAccessoryType
@@ -35,10 +35,10 @@ open class BaseCellViewModel {
         _ = cellSelected.asObservable().subscribe(onNext: { ( isSelected ) in
             
             if isSelected {
-                self.cellView?.accessoryType = UITableViewCellAccessoryType.checkmark
+                self.cellView?.accessoryType = UITableViewCell.AccessoryType.checkmark
             }
             else {
-                self.cellView?.accessoryType = UITableViewCellAccessoryType.none
+                self.cellView?.accessoryType = UITableViewCell.AccessoryType.none
             }
             
         })

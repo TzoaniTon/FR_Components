@@ -22,7 +22,7 @@ open class CellViewModel_0001: BaseCellViewModel {
         title: String,
         subtitle: String,
         imageRight: UIImage?,
-        cellAccessoryType: UITableViewCellAccessoryType = UITableViewCellAccessoryType.none
+        cellAccessoryType: UITableViewCell.AccessoryType = UITableViewCell.AccessoryType.none
     ) {
         super.init(cellHeight: nil, cellAccessoryType: cellAccessoryType)
         
