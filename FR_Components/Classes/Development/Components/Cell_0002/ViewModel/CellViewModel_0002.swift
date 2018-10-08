@@ -19,7 +19,7 @@ open class CellViewModel_0002: BaseCellViewModel {
         detail: String,
         cellAccessoryType: UITableViewCell.AccessoryType = UITableViewCell.AccessoryType.none
     ) {
-        super.init(cellHeight: nil, cellAccessoryType: cellAccessoryType)
+        super.init(cellHeight: 90, cellAccessoryType: cellAccessoryType)
         
         self.title.value = title
         self.detail.value = detail

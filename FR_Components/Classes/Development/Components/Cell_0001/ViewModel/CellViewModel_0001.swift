@@ -24,7 +24,7 @@ open class CellViewModel_0001: BaseCellViewModel {
         imageRight: UIImage?,
         cellAccessoryType: UITableViewCell.AccessoryType = UITableViewCell.AccessoryType.none
     ) {
-        super.init(cellHeight: nil, cellAccessoryType: cellAccessoryType)
+        super.init(cellHeight: 70, cellAccessoryType: cellAccessoryType)
         
         self.imageLeft.value = imageLeft
         self.title.value = title

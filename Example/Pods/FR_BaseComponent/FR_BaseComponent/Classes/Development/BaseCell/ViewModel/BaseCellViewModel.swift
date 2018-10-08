@@ -19,7 +19,7 @@ open class BaseCellViewModel {
     public var cellSelected = Variable<Bool>(false)
     
     public var cellHeight: CGFloat?
-    public var cellSelectionStyle: UITableViewCell.SelectionStyle?
+    public var cellSelectionStyle: UITableViewCell.SelectionStyle
     public var cellAccessoryType: UITableViewCell.AccessoryType?
     
     public var swipeLeftCell: SwipeCellModel?
@@ -27,19 +27,16 @@ open class BaseCellViewModel {
     
     public init(
         cellHeight: CGFloat?,
-        cellAccessoryType: UITableViewCell.AccessoryType?
-        ) {
+        cellSelectionStyle: UITableViewCell.SelectionStyle = .none,
+        cellAccessoryType:  UITableViewCell.AccessoryType? = .none
+    ) {
         self.cellHeight = cellHeight
+        self.cellSelectionStyle = cellSelectionStyle
         self.cellAccessoryType = cellAccessoryType
         
         _ = cellSelected.asObservable().subscribe(onNext: { ( isSelected ) in
             
-            if isSelected {
-                self.cellView?.accessoryType = UITableViewCell.AccessoryType.checkmark
-            }
-            else {
-                self.cellView?.accessoryType = UITableViewCell.AccessoryType.none
-            }
+            self.selectionHandler()
             
         })
     }
@@ -52,12 +49,13 @@ open class BaseCellViewModel {
                 cellView = try setupCellView()
             }
             
-            if let cellSelectionStyle = cellSelectionStyle {
-                cellView!.selectionStyle = cellSelectionStyle
-            }
+            cellView!.selectionStyle = cellSelectionStyle
             
             if let cellAccessoryType = cellAccessoryType {
                 cellView!.accessoryType = cellAccessoryType
+            }
+            else {
+                selectionHandler()
             }
             
             return cellView!
@@ -68,5 +66,16 @@ open class BaseCellViewModel {
     
     open func setupCellView() throws -> BaseCellView {
         throw ErrorCellViewModel.NotSetupCellView
+    }
+    
+    // MARK: - Utility
+    
+    func selectionHandler() {
+        if cellSelected.value {
+            self.cellView?.accessoryType = UITableViewCell.AccessoryType.checkmark
+        }
+        else {
+            self.cellView?.accessoryType = UITableViewCell.AccessoryType.none
+        }
     }
 }
