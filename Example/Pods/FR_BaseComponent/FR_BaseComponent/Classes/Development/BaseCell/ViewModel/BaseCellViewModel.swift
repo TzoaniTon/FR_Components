@@ -13,7 +13,7 @@ enum ErrorCellViewModel: Error {
     case NotSetupCellView
 }
 
-open class BaseCellViewModel {
+open class BaseCellViewModel: NSObject {
     public var cellView: BaseCellView?
     public var indexPath: IndexPath?
     public var cellSelected = Variable<Bool>(false)
@@ -33,6 +33,8 @@ open class BaseCellViewModel {
         self.cellHeight = cellHeight
         self.cellSelectionStyle = cellSelectionStyle
         self.cellAccessoryType = cellAccessoryType
+        
+        super.init()
         
         _ = cellSelected.asObservable().subscribe(onNext: { ( isSelected ) in
             
