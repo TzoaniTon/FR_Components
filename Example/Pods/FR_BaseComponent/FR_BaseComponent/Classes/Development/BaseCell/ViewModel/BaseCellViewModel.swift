@@ -16,6 +16,7 @@ enum ErrorCellViewModel: Error {
 open class BaseCellViewModel: NSObject {
     public var cellView: BaseCellView?
     public var indexPath: IndexPath?
+    public var key: String?
     public var cellSelected = Variable<Bool>(false)
     
     public var cellHeight: CGFloat?
@@ -26,10 +27,12 @@ open class BaseCellViewModel: NSObject {
     public var swipeRightCell: SwipeCellModel?
     
     public init(
+        key: String?=nil,
         cellHeight: CGFloat?,
         cellSelectionStyle: UITableViewCell.SelectionStyle = .none,
         cellAccessoryType:  UITableViewCell.AccessoryType? = .none
-    ) {
+        ) {
+        self.key = key
         self.cellHeight = cellHeight
         self.cellSelectionStyle = cellSelectionStyle
         self.cellAccessoryType = cellAccessoryType
@@ -79,5 +82,17 @@ open class BaseCellViewModel: NSObject {
         else {
             self.cellView?.accessoryType = UITableViewCell.AccessoryType.none
         }
+    }
+    
+    public func convert<T>( _ key: String, cellViewModel: T.Type ) -> T? {
+        guard let cellKey = self.key else {
+            return nil
+        }
+        
+        if cellKey.elementsEqual( key ) {
+            return self as? T
+        }
+        
+        return nil
     }
 }
