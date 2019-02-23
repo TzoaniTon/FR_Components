@@ -33,7 +33,7 @@ open class CellViewModel_0001: BaseCellViewModel {
     }
     
     override open func setupCellView() throws -> BaseCellView {
-        let cellView = BaseCellView.build(cellType: CellView_0001.self)
+        let cellView = UIView.build(viewType: CellView_0001.self)
         
         _ = imageLeft.asObservable().bind(to: cellView.imageLeftView.rx.image)
         _ = title.asObservable().bind(to: cellView.labelTitleView.rx.text)

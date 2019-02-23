@@ -26,7 +26,7 @@ open class CellViewModel_0002: BaseCellViewModel {
     }
     
     open override func setupCellView() throws -> BaseCellView {
-        let cellView = BaseCellView.build(cellType: CellView_0002.self)
+        let cellView = UIView.build(viewType: CellView_0002.self)
         
         _ = title.asObservable().bind(to: cellView.labelTitleView.rx.text)
         _ = detail.asObservable().bind(to: cellView.textDetailView.rx.text)

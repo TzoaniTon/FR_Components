@@ -1,14 +1,14 @@
 PODS:
-  - FR_BaseComponent (1.2.6):
+  - FR_BaseComponent (1.2.7):
     - RxCocoa
     - RxSwift
     - SwipeCellKit (= 2.5.0)
   - FR_Components (1.1.3):
     - FR_BaseComponent
-  - RxAtomic (4.4.0)
-  - RxCocoa (4.4.0):
+  - RxAtomic (4.4.1)
+  - RxCocoa (4.4.1):
     - RxSwift (~> 4.0)
-  - RxSwift (4.4.0):
+  - RxSwift (4.4.1):
     - RxAtomic (~> 4.4)
   - SwipeCellKit (2.5.0)
 
@@ -28,11 +28,11 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  FR_BaseComponent: 0f0c6a3b4558b4536dc5662737cdb4fc43421e17
+  FR_BaseComponent: 59c3168059617f4908532ffe4ff9410114b1d381
   FR_Components: 9fef45338341c084ccdbea7e36534f22b451be3c
-  RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
-  RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
-  RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
+  RxAtomic: f8d6adc1ccb87a767811269e4875887bc74dbf19
+  RxCocoa: 2f35a76bf8887872e28a1914112395b11b8e0e64
+  RxSwift: 92fcf68dfef21f3e2ab1965363d9e7b3d787597e
   SwipeCellKit: d8f2617538ce3021cb0a11d1b93856a06a2f2e20
 
 PODFILE CHECKSUM: 79a21c7347c3cfc809012af23be965c6dc358b80
