@@ -267,10 +267,11 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-FR_Components_Example/Pods-FR_Components_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-FR_Components_Example/Pods-FR_Components_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/FR_BaseComponent/FR_BaseComponent.framework",
 				"${BUILT_PRODUCTS_DIR}/FR_Components/FR_Components.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwipeCellKit/SwipeCellKit.framework",
 			);
@@ -279,12 +280,13 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FR_BaseComponent.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FR_Components.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwipeCellKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FR_Components_Example/Pods-FR_Components_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FR_Components_Example/Pods-FR_Components_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		1391FB10BD8B4300FEC180F7 /* [CP] Check Pods Manifest.lock */ = {

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FR_Components'
-  s.version          = '1.2.0'
+  s.version          = '1.3.0'
   s.summary          = 'FR_Components is central component of presentation layer for 4Rest'
   s.description      = '4Rest is Core Framework of iOS that consists of Data mapping, Merge data, Network manager, Security, Database manager and Presentation manager'
   s.homepage         = 'https://github.com/TzoaniTon/FR_Components'
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   # Platform required #
 
   s.ios.deployment_target = '10.0'
-  s.swift_version = '4.2'
+  s.swift_version = '5.1'
   s.requires_arc = true
 
   # File Structure #

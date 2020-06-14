@@ -14,10 +14,12 @@ enum ErrorCellViewModel: Error {
 }
 
 open class BaseCellViewModel: NSObject {
+    let disposeBag = DisposeBag()
+    
     public var cellView: BaseCellView?
     public var indexPath: IndexPath?
     public var key: String?
-    public var cellSelected = Variable<Bool>(false)
+    public var cellSelected = BehaviorRelay<Bool>(value: false)
     
     public var cellHeight: CGFloat?
     public var cellSelectionStyle: UITableViewCell.SelectionStyle
@@ -30,7 +32,7 @@ open class BaseCellViewModel: NSObject {
         key: String?=nil,
         cellHeight: CGFloat?,
         cellSelectionStyle: UITableViewCell.SelectionStyle = .none,
-        cellAccessoryType:  UITableViewCell.AccessoryType? = .none
+        cellAccessoryType:  UITableViewCell.AccessoryType? = Optional.none
         ) {
         self.key = key
         self.cellHeight = cellHeight
@@ -40,10 +42,8 @@ open class BaseCellViewModel: NSObject {
         super.init()
         
         _ = cellSelected.asObservable().subscribe(onNext: { ( isSelected ) in
-            
             self.selectionHandler()
-            
-        })
+        }).disposed(by: disposeBag)
     }
     
     public func getCellView( _ indexPath: IndexPath ) throws -> BaseCellView {
